@@ -1,0 +1,69 @@
+// ==========================================================================
+// # Objects: Button
+// ==========================================================================
+
+.button {
+    @include button-size();
+    margin: 5px;
+    cursor: pointer;
+    appearance: none;
+    outline: none;
+    -webkit-appearance: none;
+    font-weight: 500;
+    border-width: 2px;
+    font-family: inherit;
+    //@apply text-white;
+
+    // Add disabled color
+
+    &.button-solid {
+        &.button-primary {
+            @include button(theme('colors.white'), theme('colors.primary.default'), theme('colors.primary.300'));
+        }
+
+        &.button-secondary {
+            @include button(theme('colors.white'), theme('colors.secondary.default'), theme('colors.secondary.300'));
+        }
+
+        &.button-success {
+            @include button(theme('colors.white'), theme('colors.success.default'), theme('colors.success.300'));
+        }
+
+        &.button-warning {
+            @include button(theme('colors.white'), theme('colors.warning.default'), theme('colors.warning.300'));
+        }
+
+        &.button-danger {
+            @include button(theme('colors.white'), theme('colors.danger.default'), theme('colors.danger.300'));
+        }
+
+        &.button-info {
+            @include button(theme('colors.white'), theme('colors.info.default'), theme('colors.info.300'));
+        }
+    }
+    &.button-outline {
+        &.button-primary {
+            @include button(theme('colors.primary.default'), transparent, theme('colors.primary.default'));
+        }
+
+        &.button-secondary {
+            @include button(theme('colors.secondary.default'), transparent, theme('colors.secondary.default'));
+        }
+
+        &.button-success {
+            @include button(theme('colors.success.default'), transparent, theme('colors.success.default'));
+        }
+
+        &.button-warning {
+            @include button(theme('colors.warning.default'), transparent, theme('colors.warning.default'));
+        }
+
+        &.button-danger {
+            @include button(theme('colors.danger.default'), transparent, theme('colors.danger.default'));
+        }
+
+        &.button-info {
+            @include button(theme('colors.info.default'), transparent, theme('colors.info.default'));
+        }
+    }
+}
