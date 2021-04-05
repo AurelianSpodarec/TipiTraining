@@ -6,46 +6,58 @@ use Roots\Acorn\View\Composer;
 
 class Page extends Composer
 {
-    /**
-     * List of views served by this composer.
-     *
-     * @var array
-     */
+   
     protected static $views = [
         'page',
     ];
 
-
     public function with()
     {
         return [
-            'site' => $this->site(),
+            'page' => $this->page(),
         ];
     }
 
 
-
-
-
-    public function site()
+    public function page()
     {
 
         $data = [];
-        // $featured = have_row('flexible_content');
-        $featured = get_field('flexible_content');
 
+        $flexibleContent = get_field('flexible_content');
+        $flexibleContentLength = count($flexibleContent);
+ 
+        for ($index = 0; $index <= $flexibleContentLength - 1; $index++) {
 
+            $row = $flexibleContent[$index];
 
+            $rowContent = $row['row'];
+            $rowConfig = $row['row_config'];
 
-        // $data = $data->
+            // $columnConfig = $rowContent['column_config'];
+// 
+// print_r($rowContent[$index]['column_config']);
+// print_r($rowContent);
+            // foreach ($rowContent as $obj) {
+            //     print_r($obj);
+            //     // array_push($data, $obj['column_config']['column_width']);
+            // }
 
-        foreach($featured as $f) {
-             
+            print_r($row['row'][0]['column_config']['column_width']);
+            $row = [
+                
+            ];
+
+            $rowConfig = [
+                'container'       => $rowConfig['container'],
+                'backgroundColor' => $rowConfig['background_color'],
+            ];
+
+           
+
+            array_push($data, $rowConfig);
             
-
-          $data = $f['row_config']['background_color'];
-
-        }
+          }
 
         return $data;
     }
