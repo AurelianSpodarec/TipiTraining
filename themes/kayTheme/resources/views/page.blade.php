@@ -1,52 +1,54 @@
 @extends('layouts.app')
 
-<h1>Page</h1>
-
+@section('content')
 <?php
 
 // $flexibleContentPath = dirname(__FILE__) . '\\blocks\\';
 $flexibleContentPath = "C:\\Users\\44775\\Desktop\\Web Development\\Clients\\KayLittlehales\\FutureproofED\\wp-content\\themes\\kayTheme\\resources\\views\\blocks\\";
- 
 $count = 0;
-if ( have_rows( 'flexible_content' ) ) :
-	while ( have_rows( 'flexible_content' ) ) : the_row(); ?>
+?>
+
+@if ( have_rows( 'flexible_content' ) ) 
+	@while ( have_rows( 'flexible_content' ) ) <?php the_row(); ?>
  
-
-    <?php if ( have_rows( 'row' ) ) :
-            while ( have_rows( 'row' ) ) : the_row(); ?>
-
+        @if ( have_rows( 'row' ) )
+            @while ( have_rows( 'row' ) ) <?php the_row(); ?>
+    
             <x-section bgColor="{{ $page[$count]['backgroundColor'] }}">
 
 
-                <?php if ( have_rows( 'column' ) ) :
-                    while ( have_rows( 'column' ) ) : the_row(); ?>
+                @if ( have_rows( 'column' ) )
+                    @while ( have_rows( 'column' ) ) <?php the_row(); ?>
 
-                    <div>
+                    <div class="{{ $page[$count]['columnWidth'] }}">
+
+
                         <?php $layout = get_row_layout();
-                        $file = ( $flexibleContentPath . str_replace( '_', '-', $layout) . '.php' );                        
+                        // print_r($page[$count]);
+                     
+                        
+                        $file = ( $flexibleContentPath . str_replace( '_', '-', $layout) . '.blade.php' );                        
                         
                         if ( file_exists( $file ) ) {
-                            include( $file );
+                            @include( $file );
                         }
                         ?>
+                        
                     
                     </div>
 
-                    <?php
-
-                    endwhile;
-                endif; ?>
-
+                    @endwhile
+                @endif
 
             </x-section>
 
+            @endwhile
+        @endif
+        
+        <?php $count++; ?>
 
-        <?php endwhile;
-            endif;
+	@endwhile
+@endif
 
-            $count++;
 
-	endwhile;
-endif;
-
-?>
+@endsection

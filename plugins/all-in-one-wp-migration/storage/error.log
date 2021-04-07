@@ -1,0 +1,9 @@
+Apr 05 2021 21:54:19
+{"Number":2,"Message":"rmdir(C:\\Users\\44775\\Desktop\\Web Development\\Clients\\KayLittlehales\\FutureproofED\\wp-content\\plugins\\all-in-one-wp-migration\\storage\\7yjet0c7yx6w): Directory not empty","File":"C:\\Users\\44775\\Desktop\\Web Development\\Clients\\KayLittlehales\\FutureproofED\\wp-content\\plugins\\all-in-one-wp-migration\\lib\\vendor\\servmask\\filesystem\\class-ai1wm-directory.php","Line":72}
+
+Apr 05 2021 21:54:34
+{"Number":2,"Message":"filesize(): stat failed for C:\\Users\\44775\\Desktop\\Web Development\\Clients\\KayLittlehales\\FutureproofED\\wp-content\\plugins\\all-in-one-wp-migration\\storage\\7yjet0c7yx6w\\localhost-futureproofed-20210405-215409-trwkd9.wpress","File":"C:\\Users\\44775\\Desktop\\Web Development\\Clients\\KayLittlehales\\FutureproofED\\wp-content\\plugins\\all-in-one-wp-migration\\functions.php","Line":229}
+
+Apr 05 2021 21:54:34
+{"Number":2,"Message":"fopen(C:\\Users\\44775\\Desktop\\Web Development\\Clients\\KayLittlehales\\FutureproofED\\wp-content\\plugins\\all-in-one-wp-migration\\storage\\7yjet0c7yx6w\\content.list): failed to open stream: No such file or directory","File":"C:\\Users\\44775\\Desktop\\Web Development\\Clients\\KayLittlehales\\FutureproofED\\wp-content\\plugins\\all-in-one-wp-migration\\functions.php","Line":1419}
+

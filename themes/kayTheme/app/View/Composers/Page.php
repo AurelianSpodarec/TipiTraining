@@ -26,7 +26,8 @@ class Page extends Composer
 
         $flexibleContent = get_field('flexible_content');
         $flexibleContentLength = count($flexibleContent);
- 
+//  print_r($flexibleContent);
+
         for ($index = 0; $index <= $flexibleContentLength - 1; $index++) {
 
             $row = $flexibleContent[$index];
@@ -34,28 +35,29 @@ class Page extends Composer
             $rowContent = $row['row'];
             $rowConfig = $row['row_config'];
 
-            // $columnConfig = $rowContent['column_config'];
-// 
-// print_r($rowContent[$index]['column_config']);
-// print_r($rowContent);
-            // foreach ($rowContent as $obj) {
-            //     print_r($obj);
-            //     // array_push($data, $obj['column_config']['column_width']);
-            // }
+            $column = $row['row'][0]['column'][0];
+            $columnConfig = $row['row'][0]['column_config'];
 
-            print_r($row['row'][0]['column_config']['column_width']);
-            $row = [
-                
-            ];
-
-            $rowConfig = [
+            // print_r($flexibleContent);
+            
+            $rowConfigData = [
                 'container'       => $rowConfig['container'],
                 'backgroundColor' => $rowConfig['background_color'],
             ];
+            
+            $columnConfigData = [
+                'columnWidth'   => $columnConfig['column_width'],
+            ];
+            
+          
+            
+            // print_r($column);   
+
+            // pass in the button as well
 
            
 
-            array_push($data, $rowConfig);
+            array_push($data, array_merge($rowConfigData, $columnConfigData, $column));
             
           }
 
