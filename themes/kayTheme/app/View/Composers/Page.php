@@ -9,6 +9,7 @@ class Page extends Composer
    
     protected static $views = [
         'page',
+        'blocks/*'
     ];
 
     public function with()

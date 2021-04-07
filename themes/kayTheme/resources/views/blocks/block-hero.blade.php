@@ -1,39 +1,19 @@
+<div class="hero relative">
 
-<div>
-    <div><img src="https://storybrand.com/wp-content/uploads/2020/03/live-stream-icon-2.png" /></div>
-    <h1><?php echo get_sub_field('title'); ?></h1>
-    <h2>Create a clear message and 5-part marketing plan for your business at the StoryBrand Marketing Livestream</h2>
-    <div>May 17th and 18th, 2021</div>
-    <x-button variant="primary" kind="solid">Register Now</x-button>
+    <video class="object-fit w-full h-full" data-id="2" muted="" autoplay="autoplay" loop="loop">
+        <source src="https://player.vimeo.com/external/397303949.sd.mp4?s=24c722d4097e1a4fd7b830ca8992097c7f1d520f&amp;profile_id=165" type="video/mp4">
+    </video>
+
+    <div class="absolute top-0 right-0 bottom-0 leftt-0">
+    <div class="flex h-full items-center jusstify-center flex-column">
+        <div><img src="https://storybrand.com/wp-content/uploads/2020/03/live-stream-icon-2.png" /></div>
+        
+    
+        <h2>Create a clear message and 5-part marketing plan for your business at the StoryBrand Marketing Livestream</h2>
+        <div>May 17th and 18th, 2021</div>
+    </div>
+    </div>
+
+    <x-button variant="primary" kind="solid">button</x-button>
+
 </div>
-
-
-<?php
-
-// Check rows exists.
-// if( have_rows('button') ):
-
-//     // Loop through rows.
-//     while( have_rows('button') ) : the_row();
-
-//         // Load sub field value.
-//         $button_text = get_sub_field('button_text');
-//         $button_variant = get_sub_field('button_variant');
-//         $button_kind = get_sub_field('button_kind');
-//         // Do something...
-
-//         // print_r($page)
- 
-
-//     endwhile;
-
-// // No value.
-// else :
-//     // Do something...
-// endif;
-
-// get_sub_field('button');
-
-// print_r();
-// <x-button variant="{{ $button_variant }}" kind="solid">Primary</x-button> 
-?>
