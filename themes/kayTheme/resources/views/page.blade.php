@@ -27,15 +27,17 @@
 
                 <?php 
                     $layout = get_row_layout();
+                    $layoutConverted = str_replace( '_', '-', $layout);
                     // print_r($page[$count]);
-                    $file = ( $flexibleContentPath . str_replace( '_', '-', $layout) . '.blade.php' );                        
-
-                    if ( file_exists( $file ) ) {
-                        @include( $file );
-                    }
+                    $file = ( $flexibleContentPath . str_replace( '_', '-', $layout) . '.blade.php' );      
+                                      
                 ?>
-                
-            
+
+                @if( file_exists( $file ))
+                    @include('blocks.' . $layoutConverted)
+                @endif
+
+
             </div>
             @endwhile
             @endif

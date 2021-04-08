@@ -5,7 +5,8 @@
     </video>
 
     <div class="absolute top-0 right-0 bottom-0 leftt-0">
-    <div class="flex h-full items-center jusstify-center flex-column">
+    <div class="flex h-full items-center justify-center flex-col text-center">
+        
         <div><img src="https://storybrand.com/wp-content/uploads/2020/03/live-stream-icon-2.png" /></div>
         
     
