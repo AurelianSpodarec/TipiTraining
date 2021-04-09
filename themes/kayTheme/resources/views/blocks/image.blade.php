@@ -1,1 +1,4 @@
-<p>image</p>
+
+<?php if ( !empty(get_sub_field( 'image' ) ) ) : ?>
+    <img src="<?php the_sub_field( 'image' ); ?>" />
+<?php endif; ?>
