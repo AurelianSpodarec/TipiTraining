@@ -7,6 +7,7 @@ use Roots\Acorn\View\Component;
 class Button extends Component
 {
 
+
     // TODO: Add error handling
 
     public $buttonVariant;
@@ -14,6 +15,7 @@ class Button extends Component
     public $buttonRadius;
     public $buttonSize;
 //    public $buttonDisabled;
+//   ADD: Uppercase, disabed, new tab,
 
     public $message;
 

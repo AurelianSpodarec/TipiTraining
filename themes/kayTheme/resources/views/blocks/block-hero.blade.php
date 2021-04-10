@@ -1,20 +1,19 @@
-<?php 
-if( have_rows('button') ):
-    
-    while( have_rows('button') ) : the_row();
-       
-        $button_text = get_sub_field('button_text');
-        $button_variant = get_sub_field('button_variant');
-        $button_kind = get_sub_field('button_kind');
-         
-    endwhile;
- 
-else :
-    
-endif;
- 
-?>
 
+{{-- // TODO: Create a function to repeat this --}}
+@if( have_rows('button') )
+    
+    @while( have_rows('button') ) <?php the_row() ?>
+
+        <?php 
+            $button_text = get_sub_field('button_text');
+            $button_variant = get_sub_field('button_variant');
+            $button_kind = get_sub_field('button_kind');
+        ?>
+         
+    @endwhile
+ 
+@endif
+ 
 <div class="hero relative py-32 lg:py-0 bg-cover bg-no-repeat bg-center" style="background-image: url(https://storybrand.com/wp-content/uploads/2019/03/Watch-Video.jpg);">
 
 
@@ -25,7 +24,7 @@ endif;
     @endif
    
 
-    <div class="absolute  pt-32 top-0 right-0 bottom-0 left-0">
+    <div class="lg:absolute  pt-32 top-0 right-0 bottom-0 left-0">
     <div class="px-5 text-white lg:flex h-full lg:items-center justify-center flex-col lg:text-center">
         
         <div><img class="mb-2" src="https://storybrand.com/wp-content/uploads/2020/03/live-stream-icon-2.png" alt="alt" /></div>
