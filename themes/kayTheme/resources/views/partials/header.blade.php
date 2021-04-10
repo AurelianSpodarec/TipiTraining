@@ -17,16 +17,22 @@
   </svg>
   </a>
 
-  <nav class="nav-primary">
+  <div class="lg:hidden">
+  Toggle Menu
+  </div>
+
+  <div class="js-mobileNavMenu transform overflow-y-auto transition duration-500 ease-in-out fixed h-full right-0 top-0 bottom-0 z-50 bg-black lg:hidden translate-x-full">
+  <nav>
     @if (has_nav_menu('primary_navigation'))
       {!! wp_nav_menu([
           'theme_location' => 'primary_navigation', 
-          'menu_class' => 'nav flex',
+          'menu_class' => 'nav lg:flex',
           'echo' => false,
           'walker' => new \App\NavWalker()
          ]) !!}
     @endif
   </nav>
+  </div>  
 
 
 </div>

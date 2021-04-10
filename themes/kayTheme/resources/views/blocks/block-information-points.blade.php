@@ -1,11 +1,11 @@
 <div>
 
-    <div>
-        <h2>What Makes the Workshop So Special?<h2>
-        <h2>It’s All About the Coaching.</h2>
+    <div class="text-center">
+        <h2 class="text-2xl font-bold">What Makes the Workshop So Special?<h2>
+        {{-- make this repeater field --}}
     </div>
 
-    <p>On the Livestream, you’ll have access to a StoryBrand Expert throughout the workshop to make sure you get your message and marketing plan right.</p>
+    <p class="text-center">On the Livestream, you’ll have access to a StoryBrand Expert throughout the workshop to make sure you get your message and marketing plan right.</p>
 
     <ul>
         <li>

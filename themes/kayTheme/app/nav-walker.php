@@ -95,10 +95,10 @@ class NavWalker extends \Walker_Nav_Menu {
 //            }
 //        } else {
             if ( $item->is_subitem ) {
-                $item_html = str_replace( '<a', '<a class="nav-mobile font-bold dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"', $item_html );
+                $item_html = str_replace( '<a', '<a class="font-bold" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"', $item_html );
                 $item_html = str_replace( '</a>', ' <b class="caret"></b></a>', $item_html );
             } else {
-                $item_html = str_replace( '<a', '<a  class="nav-mobile text-black font-bold lg:text-white tracking-three block py-2 lg:py-2 lg:px-3 text-sm lg:hover:text-white lg:hover:text-gray-300"', $item_html );
+                $item_html = str_replace( '<a', '<a  class="font-bold text-white tracking-three block py-2 lg:py-2 lg:px-3 text-sm lg:hover:text-white lg:hover:text-gray-300"', $item_html );
             }
 //        }
 

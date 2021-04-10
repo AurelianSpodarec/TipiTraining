@@ -17,8 +17,8 @@
 
         @if ( have_rows( 'row' ) )
         @while ( have_rows( 'row' ) ) <?php the_row(); ?>
-        <x-section bgColor="{{ $page[$count]['backgroundColor'] }}">
-
+        <x-section bgColor="{{ $page[$count]['backgroundColor'] }}" container="{{ $page[$count]['container'] }}">
+ 
 
             @if ( have_rows( 'column' ) )
             @while ( have_rows( 'column' ) ) <?php the_row(); ?>
@@ -37,16 +37,14 @@
                     @include('blocks.' . $layoutConverted)
                 @endif
 
-
-            </div>
             @endwhile
             @endif
             
 
+        </div>
         </x-section>
         @endwhile
         @endif
-        
         <?php $count++; ?>
 
 
