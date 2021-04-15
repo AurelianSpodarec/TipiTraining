@@ -15,7 +15,7 @@
 
     @if ( have_rows( 'row' ) )
     @while ( have_rows( 'row' ) ) <?php the_row(); ?>
-    <x-section bgColor="{{ $page[$count]['backgroundColor'] }}" container="{{ $page[$count]['container'] }}">
+    <x-section bgColor="{{ $page[$count]['backgroundColor'] }}" gutter="{{ $page[$count]['gutter']}}" container="{{ $page[$count]['container'] }}">
 
 
         @if ( have_rows( 'column' ) )

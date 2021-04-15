@@ -1,4 +1,0 @@
-<div>
-FQA accordion
-
-</div>

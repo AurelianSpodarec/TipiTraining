@@ -16,7 +16,7 @@ module.exports = {
         extend: {
             backgroundColors: {
                 primary: {
-                    'default': '#5041ab',
+                    'default': '#ff0000',
                     '300': '#b9b3dd',
                     '500': '#968dcd',
                     '700': '#7367bc'
@@ -36,7 +36,7 @@ module.exports = {
             },
             colors: {
                 primary: {
-                    'default': '#5041ab',
+                    'default': '#ff0000',
                     '300': '#b9b3dd',
                     '500': '#968dcd',
                     '700': '#7367bc'

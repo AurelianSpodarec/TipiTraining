@@ -21,36 +21,38 @@ class Section extends Component
     // ];
 
     public $bgColor = [
-        'default'   => 'bg-transparent',
-        'primary'   => 'bg-primary-default',
-        'secondary' => 'bg-secondary-default',
-        'teritary'  => 'bg-teritary-default'
+        'default'   => 'section--bg-transparent',
+        'primary'   => 'section--bg-primary-default',
+        'secondary' => 'section--bg-secondary-default',
+        'teritary'  => 'section--bg-teritary-default',
+        'gray'     =>  'bg-gray-50',
     ];
 
-    public $section = [
-        'default' => '16px',
-        '2xs'     => 'section-2xs',
-        'xs'      => 'section-xs',
-        'sm'      => 'section-sm',
-        'md'      => 'section-md',
-        'lg'      => 'section-lg',
-        'xl'      => 'section-xl',
-        '2xl'     => 'section-2xl',
-        '3xl'     => 'section-3xl',
-        '4xl'     => 'section-4xl',
-        '5xl'     => 'section-5xl',
+    public $gutter = [
+        'none'    => 'gutter-none',
+        'default' => 'gutter-md',
+        '2xs'     => 'gutter-2xs',
+        'xs'      => 'gutter-xs',
+        'sm'      => 'gutter-sm',
+        'md'      => 'gutter-md',
+        'lg'      => 'gutter-lg',
+        'xl'      => 'gutter-xl',
+        '2xl'     => 'gutter-2xl',
+        '3xl'     => 'gutter-3xl',
+        '4xl'     => 'gutter-4xl',
+        '5xl'     => 'gutter-5xl',
     ];
 
     public $kindY = [
-        'clear-ly' => 'section-clear-ly',
-        'clear-ry' => 'section-clear-ry',
-        'clear-y'  => 'section-clear-y',
+        'clear-ly' => 'gutter-clear-ly',
+        'clear-ry' => 'gutter-clear-ry',
+        'clear-y'  => 'gutter-clear-y',
     ];
 
     public $kindX = [
-        'clear-lx' => 'section-clear-lx',
-        'clear-rx' => 'section-clear-rx',
-        'clear-x'  => 'section-clear-x',
+        'clear-lx' => 'gutter-clear-lx',
+        'clear-rx' => 'gutter-clear-rx',
+        'clear-x'  => 'gutter-clear-x',
     ];
 
 
@@ -60,9 +62,10 @@ class Section extends Component
 
     public $container;
 
-    public function __construct($bgColor = 'default', $container = null, $message = null)
+    public function __construct($bgColor = 'default', $gutter = 'md', $container = null, $message = null)
     {
-        $this->bgColor = $this->bgColor[$bgColor] ?? $this->bgColor['default']; 
+        $this->bgColor = $this->bgColor[$bgColor] ?? $this->bgColor['default'];
+        $this->gutter = $this->gutter[$gutter] ?? $this->gutter['md'];
         $this->container = $container;
 
         $this->message = $message;

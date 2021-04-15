@@ -44,6 +44,7 @@ class Page extends Composer
             $rowConfigData = [
                 'container'       => $rowConfig['container'],
                 'backgroundColor' => $rowConfig['background_color'],
+                'gutter'          => $rowConfig['gutter']
             ];
             
             $columnConfigData = [
