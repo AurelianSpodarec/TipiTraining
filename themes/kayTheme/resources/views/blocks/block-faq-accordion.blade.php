@@ -1,7 +1,7 @@
 <h2>FAQ</h2>
 
 <div>
-<div class="accordion flex flex-col bg-white p-10 rounded-lg items-center justify-center">
+<div class="accordion flex flex-col bg-white mx-6 p-10 rounded-lg items-center justify-center">
    
     <div class="w-full mb-5">
         <input type="checkbox" name="panel" id="panel-1" class="hidden">

@@ -21,8 +21,8 @@
 <ul class="flex flex-wrap justify-between">
 @if ( have_rows( 'points' ) ) 
 @while ( have_rows( 'points' ) ) <?php the_row() ?>
-    
-    <li class="flex items-top mb-6" style="width: 45%;">
+    {{-- width 45% not 5/12 --}}
+    <li class="flex items-top mb-6 w-full md:w-5/12"> 
         <svg class="w-24 mt-2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20px" height="20px" viewBox="0 0 20 20" version="1.1">
             <defs>
                 <linearGradient x1="0.99949%" y1="50%" x2="100%" y2="50%" id="linearGradient-1">

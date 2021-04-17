@@ -12,7 +12,7 @@
 
     <div>
 
-        <div id="day-1" class="bg-white p-6 pb-12">
+        <div id="day-1" class="bg-white mx-6 p-6 pb-12">
             <div class="flex justify-between mb-6">
                 <div class="flex items-center">
                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40px" height="41px" viewBox="0 0 40 41" version="1.1">
@@ -53,7 +53,7 @@
             </div>
 
             <div>
-                <div class="flex items-center border border-gray" style="border-width: 3px; background-color: #eff0f5;">
+                <div class="md:flex items-center border border-gray" style="border-width: 3px; background-color: #eff0f5;">
                     <div class="flex-1 bg-white"><span class="text-center text-lg font-bold p-5 block">9:30 AM CT</span></div>
                     <div class="flex-3"><span class="text-md font-bold py-5 px-6 block">Meet Your Coach in Your Digital Breakout Room</span></div>
                 </div>
