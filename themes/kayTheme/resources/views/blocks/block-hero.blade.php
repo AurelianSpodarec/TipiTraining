@@ -14,8 +14,8 @@
  
 @endif
  
-<div class="hero relative py-32 lg:py-0 bg-cover bg-no-repeat bg-center" style="background-image: url(https://storybrand.com/wp-content/uploads/2019/03/Watch-Video.jpg);">
-
+<div class="hero relative pb-20 lg:pb-0 pt-4 lg:pt-0 lg:py-32 lg:py-0 bg-cover bg-no-repeat bg-center" style="background-image: url(https://storybrand.com/wp-content/uploads/2019/03/Watch-Video.jpg);">
+ 
 
     @if ( !(wp_is_mobile()) )
         <video class="object-fit w-full h-full" data-id="2" muted="" autoplay="autoplay" loop="loop">
@@ -31,8 +31,10 @@
         <h1 class="lg:text-5xl font-bold mb-4">{!! get_sub_field('title') !!}</h1>
         <h2 class="lg:text-2xl mb-4">{!! get_sub_field('subtitle') !!}</h2>
         <span class="text-3xl font-bold block mb-12">{!! get_sub_field('subtitle_2') !!}</span>
-        <x-button variant="{{ $button_variant }}" kind="{{ $button_kind }}">{{ $button_text }}</x-button> 
 
+        @if( have_rows('button') ) 
+        <x-button size="large" variant="{{ $button_variant }}" kind="{{ $button_kind }}">{{ $button_text }}</x-button> 
+@endif
 
     </div>
     </div>

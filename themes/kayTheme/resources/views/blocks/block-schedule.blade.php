@@ -53,10 +53,35 @@
             </div>
 
             <div>
-                <div class="md:flex items-center border border-gray" style="border-width: 3px; background-color: #eff0f5;">
+                <div class="md:flex items-center mb-5 border border-gray" style="border-width: 3px; background-color: #eff0f5;">
                     <div class="flex-1 bg-white"><span class="text-center text-lg font-bold p-5 block">9:30 AM CT</span></div>
                     <div class="flex-3"><span class="text-md font-bold py-5 px-6 block">Meet Your Coach in Your Digital Breakout Room</span></div>
                 </div>
+                <div class="md:flex items-center mb-5 border border-gray" style="border-width: 3px; background-color: #eff0f5;">
+                    <div class="flex-1 bg-white"><span class="text-center text-lg font-bold p-5 block">9:30 AM CT</span></div>
+                    <div class="flex-3"><span class="text-md font-bold py-5 px-6 block">Meet Your Coach in Your Digital Breakout Room</span></div>
+                </div>
+                <div class="md:flex items-center mb-5 border border-gray" style="border-width: 3px; background-color: #eff0f5;">
+                    <div class="flex-1 bg-white"><span class="text-center text-lg font-bold p-5 block">9:30 AM CT</span></div>
+                    <div class="flex-3"><span class="text-md font-bold py-5 px-6 block">Meet Your Coach in Your Digital Breakout Room</span></div>
+                </div>
+                <div class="md:flex items-center mb-5 border border-gray" style="border-width: 3px; background-color: #eff0f5;">
+                    <div class="flex-1 bg-white"><span class="text-center text-lg font-bold p-5 block">9:30 AM CT</span></div>
+                    <div class="flex-3"><span class="text-md font-bold py-5 px-6 block">Meet Your Coach in Your Digital Breakout Room</span></div>
+                </div>
+                
+                 {{-- <div class="md:flex items-center mb-5 border border-gray" style="border-width: 3px; background-color: #eff0f5;">
+                    <div class="flex-1 bg-white" style="max-width: 163px;"><span class="text-center text-lg font-bold p-5 block">10:00 AM CT</span></div>
+                    <div class="flex-3"><span class="text-md font-bold py-5 px-6 block">Workshop Presentation Begins</span></div>
+                </div>
+                 <div class="md:flex items-center mb-5 border border-gray" style="border-width: 3px; background-color: #eff0f5;">
+                    <div class="flex-1 bg-white" style="max-width: 163px;"><span class="text-center text-lg font-bold p-5 block">12:30 AM CT</span></div>
+                    <div class="flex-3"><span class="text-md font-bold py-5 px-6 block">Lunch</span></div>
+                </div>
+                 <div class="md:flex items-center mb-5 border border-gray" style="border-width: 3px; background-color: #eff0f5;">
+                    <div class="flex-1 bg-white" style="max-width: 163px;"><span class="text-center text-lg font-bold p-5 block">4:30 AM CT</span></div>
+                    <div class="flex-3"><span class="text-md font-bold py-5 px-6 block">Day 1 Concludes</span></div>
+                </div> --}}
             </div>
         </div>
 

@@ -1,6 +1,6 @@
 <header class="absolute top-0 left-0 right-0 z-40">
 <div class="mx-auto max-w-6xl">
-<div class="flex justify-between items-center flex-wrap mt-6">
+<div class="flex justify-between items-center flex-wrap mt-10">
 
 
   <a href="{{ home_url('/') }}">

@@ -10,15 +10,25 @@
     outline: none;
     -webkit-appearance: none;
     font-weight: 500;
-    border-width: 2px;
+    // border-width: 2px;
     font-family: inherit;
     //@apply text-white;
 
     // Add disabled color
+    &.button-medium {
+        // font-size: 12px;
+        // padding: 15px 25px;
+    }
+
+    &.button-large {
+        padding: 25px 35px;
+        font-size: 1.3em;
+    }
 
     &.button-solid {
         &.button-primary {
             @include button(theme('colors.white'), theme('colors.primary.default'), theme('colors.primary.300'));
+            background: linear-gradient(to right, #ff555b, #ff531a) !important;
         }
 
         &.button-secondary {

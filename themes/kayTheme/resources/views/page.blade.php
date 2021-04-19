@@ -1,9 +1,12 @@
 @extends('layouts.app')
 @section('content')
 
-
+{{--    
+    {{-- $flexibleContentPath = dirname(__FILE__) . '\\blocks\\'; --}}
+{{-- $flexibleContentPath = " /var/www/html" --}}
 <?php
-    // $flexibleContentPath = dirname(__FILE__) . '\\blocks\\';
+
+    //$flexibleContentPath = "/var/www/html/wp-content/themes/kayTheddme/resources/views/blocks";
     $flexibleContentPath = "C:\\Users\\44775\\Desktop\\Web Development\\Clients\\KayLittlehales\\FutureproofED\\wp-content\\themes\\kayTheme\\resources\\views\\blocks\\";
     $count = 0;
 ?>
@@ -27,6 +30,7 @@
                 $layout = get_row_layout();
                 $layoutConverted = str_replace( '_', '-', $layout);
                 $file = ( $flexibleContentPath . str_replace( '_', '-', $layout) . '.blade.php' );
+ 
             ?>
 
             @if( file_exists( $file ))

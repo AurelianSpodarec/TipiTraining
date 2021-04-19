@@ -12,17 +12,24 @@
 
 @endif
 
-
-<div class="text-center">
-    <h2 class="text-2xl font-bold">What Makes the Workshop So Special?<h2>
+<div class="mb-10">
+    <div class="text-center">
+        <h2 class="text-2xl font-bold mb-4">There are just seven messages you need to create
+to connect with more customers<h2>
+    </div>
+    <p class="text-center text-lg">It's a fact -- businesses that clarify their message and build a sales funnel are the ones that thrive in the marketplace. At the StoryBrand Marketing Livestream, you'll get both done in 48 hours AND get real time coaching in an online breakout room to make sure that you’re getting it right.</p>
 </div>
-<p class="text-center">On the Livestream, you’ll have access to a StoryBrand Expert throughout the workshop to make sure you get your message and marketing plan right.</p>
 
 <ul class="flex flex-wrap justify-between">
 @if ( have_rows( 'points' ) ) 
 @while ( have_rows( 'points' ) ) <?php the_row() ?>
-    {{-- width 45% not 5/12 --}}
-    <li class="flex items-top mb-6 w-full md:w-5/12"> 
+ 
+    @if ( (wp_is_mobile()) )
+        <li class="flex items-top mb-6 w-full w-full"> 
+    @else
+        <li class="flex items-top mb-6 w-full" style="width: 45%;"> 
+    @endif
+
         <svg class="w-24 mt-2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20px" height="20px" viewBox="0 0 20 20" version="1.1">
             <defs>
                 <linearGradient x1="0.99949%" y1="50%" x2="100%" y2="50%" id="linearGradient-1">
@@ -57,6 +64,6 @@
 
 @if (have_rows('button'))
     <div class="text-center">
-        <x-button variant="{{ $button_variant }}" kind="{{ $button_kind }}">{{ $button_text }}</x-button> 
+        <x-button size="large" variant="{{ $button_variant }}" kind="{{ $button_kind }}">{{ $button_text }}</x-button> 
     </div>
 @endif

@@ -2,8 +2,8 @@
 <div class="mx-auto max-w-6xl">
 <div class="lg:flex align-center justify-between">
 
-    <div class="md:flex mb-8">
-        <a class="block w-28 mx-auto  md:ml-0 mb-10" href="{{ home_url('/') }}">
+    <div class="md:flex mb-8 lg:mb-0">
+        <a class="block w-28 mx-auto  md:ml-0 mb-10  lg:mb-0" href="{{ home_url('/') }}">
             <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 225 1000 550" style="width: 100px; fill: white;">
             <polygon points="621.38 655.07 630.7 655.07 625.84 644.95 621.38 655.07"></polygon>
             <path d="M449.23,653.76h-6.07v9.31H450a4.68,4.68,0,0,0,4.86-4.86c0-2.43-2.83-4.45-5.67-4.45" transform="translate(0.5 0.5)"></path>
@@ -19,7 +19,7 @@
         </a>
 
         <div class="ml-8 text-center">
-            <span class="block text-white text-xs mb-8 lg:mb-3">Copyright &copy; <?php echo Date('Y'); ?> TipiTraining, LLC. All rights reserved.</span>
+            <span class="block text-white text-xs mb-8 md:mb-3 lg:mb-3">Copyright &copy; <?php echo Date('Y'); ?> TipiTraining, LLC. All rights reserved.</span>
             <span class="block text-white text-xs mb-3"><a href="tel:">555-555-5555</a> - <a href="">Terms and Conditions / Privacy Policy</a></span>
         </div>
     </div>

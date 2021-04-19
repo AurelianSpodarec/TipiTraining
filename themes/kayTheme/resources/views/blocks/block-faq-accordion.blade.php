@@ -1,6 +1,7 @@
-<h2>FAQ</h2>
-
+<div class="text-center">
+        <h2 class="text-5xl mb-12 font-bold ">FQA</h2>
 <div>
+
 <div class="accordion flex flex-col bg-white mx-6 p-10 rounded-lg items-center justify-center">
    
     <div class="w-full mb-5">

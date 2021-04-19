@@ -26,42 +26,49 @@ class Page extends Composer
         $data = [];
 
         $flexibleContent = get_field('flexible_content');
-        $flexibleContentLength = count($flexibleContent);
-//  print_r($flexibleContent);
 
-        for ($index = 0; $index <= $flexibleContentLength - 1; $index++) {
 
-            $row = $flexibleContent[$index];
+            if($flexibleContent) {
 
-            $rowContent = $row['row'];
-            $rowConfig = $row['row_config'];
+            $flexibleContentLength = count($flexibleContent);
+    //  print_r($flexibleContent);
 
-            $column = $row['row'][0]['column'][0];
-            $columnConfig = $row['row'][0]['column_config'];
+            for ($index = 0; $index <= $flexibleContentLength - 1; $index++) {
 
-            // print_r($flexibleContent);
+                $row = $flexibleContent[$index];
+
+                $rowContent = $row['row'];
+                $rowConfig = $row['row_config'];
+
+                $column = $row['row'][0]['column'][0];
+                $columnConfig = $row['row'][0]['column_config'];
+
+                // print_r($flexibleContent);
+                
+                $rowConfigData = [
+                    'container'       => $rowConfig['container'],
+                    'backgroundColor' => $rowConfig['background_color'],
+                    'gutter'          => $rowConfig['gutter']
+                ];
+                
+                $columnConfigData = [
+                    'columnWidth'   => $columnConfig['column_width'],
+                ];
+                
             
-            $rowConfigData = [
-                'container'       => $rowConfig['container'],
-                'backgroundColor' => $rowConfig['background_color'],
-                'gutter'          => $rowConfig['gutter']
-            ];
-            
-            $columnConfigData = [
-                'columnWidth'   => $columnConfig['column_width'],
-            ];
-            
-          
-            
-            // print_r($column);   
+                
+                // print_r($column);   
 
-            // pass in the button as well
+                // pass in the button as well
 
-           
-
-            array_push($data, array_merge($rowConfigData, $columnConfigData, $column));
             
-          }
+
+                array_push($data, array_merge($rowConfigData, $columnConfigData, $column));
+                
+            }
+            
+
+        }
 
         return $data;
     }

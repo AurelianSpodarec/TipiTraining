@@ -12,9 +12,9 @@
 
 @endif
 
-<div class="flex">
+<div class="lg:flex px-6 lg:px-0">
 
-    <div class="w-3/5">
+    <div class="w-full lg:w-3/5">
         @if ( $video_thumbnail = get_sub_field( 'video_thumbnail' ) ) 
             <img src="{{ $video_thumbnail }}" alt="alt" />
         @endif
@@ -22,14 +22,14 @@
     </div>
 
 
-    <div class="w-2/5 bg-white">
-        <div class="p-12">
+    <div class="w-full lg:w-2/5 bg-white">
+        <div class="p-8 lg:p-12">
 
         @if ( $text = get_sub_field( 'text' ) ) 
-            <p class="pl-3 text-xl">{{ $text }}</p>
+            <p class="text-lg mb-10 lg:mb-10">{{ $text }}</p>
         @endif
 
-        <x-button variant="{{ $button_variant }}" kind="{{ $button_kind }}">{{ $button_text }}</x-button> 
+        <x-button size="large" variant="{{ $button_variant }}" kind="{{ $button_kind }}">{{ $button_text }}</x-button> 
 
     </div>
     </div>
