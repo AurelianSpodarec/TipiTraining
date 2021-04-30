@@ -27,5 +27,6 @@ require $composer;
 | to this client's browser, allowing them to enjoy our application.
 |
 */
+// /var/www/html/wp-content/themes/kayTheddme
 
 require_once __DIR__ . '/bootstrap/app.php';

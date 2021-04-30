@@ -1,7 +1,12 @@
 @extends('layouts.app')
-
+<div class="progress" id="progress"></div>
 @section('content')
-  @while(have_posts()) @php(the_post())
-    @includeFirst(['partials.content-single-' . get_post_type(), 'partials.content-single'])
-  @endwhile
+
+
+<article class="article">
+<?php echo the_title(); ?>
+
+</article>
+
+
 @endsection

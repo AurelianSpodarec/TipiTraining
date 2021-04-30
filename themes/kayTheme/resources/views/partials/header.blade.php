@@ -1,5 +1,5 @@
-<header class="absolute top-0 left-0 right-0 z-40">
-<div class="mx-auto max-w-6xl">
+ <header class="js-mainHeader transition duration-500 ease-in-out z-40 fixed w-full">
+<div class="px-5 mx-auto max-w-6xl">
 <div class="flex justify-between items-center flex-wrap mt-10">
 
 
@@ -19,7 +19,11 @@
   </a>
 
   <div class="lg:hidden">
-    Toggle Menu
+
+    <button class="hamburger" aria-label="Navigation Menu" data-hamburger-button="">
+      <span class="hamburger__span"></span>
+    </button>
+
   </div>
 
   
@@ -29,7 +33,6 @@
           'theme_location' => 'primary_navigation', 
           'menu_class' => 'flex items-center',
           'echo' => false,
-          'walker' => new \App\NavWalker()
          ]) !!}
     @endif
   </nav>
@@ -41,8 +44,6 @@
       {!! wp_nav_menu([
           'theme_location' => 'primary_navigation', 
           'menu_class' => 'nav lg:flex',
-          'echo' => false,
-          'walker' => new \App\NavWalker()
          ]) !!}
     @endif
   </nav>

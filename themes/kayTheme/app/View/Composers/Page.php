@@ -25,11 +25,10 @@ class Page extends Composer
 
         $data = [];
 
-        $flexibleContent = get_field('flexible_content');
+    
 
-
-            if($flexibleContent) {
-
+        if(get_field('flexible_content')) {
+            $flexibleContent = get_field('flexible_content');
             $flexibleContentLength = count($flexibleContent);
     //  print_r($flexibleContent);
 
@@ -66,7 +65,7 @@ class Page extends Composer
                 array_push($data, array_merge($rowConfigData, $columnConfigData, $column));
                 
             }
-            
+
 
         }
 

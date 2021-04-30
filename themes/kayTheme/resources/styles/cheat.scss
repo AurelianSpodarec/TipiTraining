@@ -3,18 +3,112 @@ label:after {
     position: absolute;
     right: 1em;
     color: #000;
-  }
-  
-  input:checked + label:after {
+}
+
+input:checked + label:after {
     content: '-';
     line-height: .8em;
-  }
-  
-  .accordion__content{
+}
+
+.accordion__content{
     max-height: 0em;
     transition: all 0.4s cubic-bezier(0.865, 0.14, 0.095, 0.87);
-  }
-  input[name='panel']:checked ~ .accordion__content {
-    /* Get this as close to what height you expect */
+}
+input[name='panel']:checked ~ .accordion__content {
     max-height: 50em;
-  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.menu-item {
+    position: relative;
+    color: white;
+
+    & a {
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+    }
+}
+
+
+.dropdown-menu {
+
+    & .nav-item a {
+        color: #c3c3c3;
+    }
+
+    transform: translateX(-10px);
+
+    display: none;
+
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 0px 4px 0px, rgba(0, 0, 0, 0.08) 0px 8px 16px 0px;
+    position: absolute;
+    left: 0px;
+    top: 100%;
+    background: rgb(255, 255, 255);
+    border-radius: 0.3rem;
+    padding: 0.25rem 0px;
+    min-width: 180px;
+    transition: 0.4s ease-in-out;
+    opacity: 0;
+
+    &.is-block {
+        display: block;
+    }
+
+    &.is-opacity {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(0px);
+    }
+
+}
+
+
+.header-fixed {
+    width: 100%;
+    position: fixed;
+}
+
+
+.is-sticky {
+    transform: translateY(-120%);
+    top: 0;
+    background: #191919;
+    -webkit-box-shadow: 0 0 5px 2px rgba(51, 51, 51, 0.3);
+    box-shadow: 0 0 5px 2px rgba(51, 51, 51, 0.3);
+}
+
+.sticky-show {
+    transform: translateY(0);
+}
+
+
+.progress {
+    background: orangered;
+    position: fixed;
+    top: 0;
+    bottom: auto;
+    left: 0;
+    width: 0%;
+    height: 5px;
+    z-index: 1000;
+}
