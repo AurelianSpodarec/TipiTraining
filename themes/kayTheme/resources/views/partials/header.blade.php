@@ -1,6 +1,6 @@
- <header class="js-mainHeader transition duration-500 ease-in-out z-40 fixed w-full">
+<header class="js-mainHeader transition duration-500 ease-in-out top-0 z-40 fixed w-full">
 <div class="px-5 mx-auto max-w-6xl">
-<div class="flex justify-between items-center flex-wrap mt-10">
+<div class="flex justify-between items-center flex-wrap my-4">
 
 
   <a href="{{ home_url('/') }}">

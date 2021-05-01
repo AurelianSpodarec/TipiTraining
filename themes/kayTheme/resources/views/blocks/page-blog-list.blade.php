@@ -14,7 +14,7 @@
         <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
         
             <article class="w-full md:w-1/2 lg:w-1/3 px-4">
-
+ {{-- @php(post_class()) --}}
                 <header class="case-studies__heading relative">
 
                     <div class="absolute flex flex-col text-center bg-black text-white" style="top: 1rem;
@@ -26,7 +26,7 @@
                     color: #fff;
                     text-align: center;
                     background-color: #d63a81;">
-                        <span class="text-md"><?php echo get_the_date('j'); ?></span>
+                        <span class="text-md"><?php echo get_the_date('d'); ?></span>
                         <span style="font-size: 10px;" class="text-xs uppercase"><?php echo get_the_date('M'); ?></span>
                     </div>
 

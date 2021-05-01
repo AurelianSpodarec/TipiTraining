@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('content')
+ 
 
 {{--    
     {{-- $flexibleContentPath = dirname(__FILE__) . '\\blocks\\'; --}}
@@ -53,5 +53,4 @@
 @endwhile
 @endif
 
-
-@endsection
+ 
