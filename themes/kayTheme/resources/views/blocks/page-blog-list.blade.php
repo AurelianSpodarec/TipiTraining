@@ -1,4 +1,4 @@
-<div class="flex">
+<div class="flex flex-wrap">
 
       <?php
         $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
@@ -13,7 +13,7 @@
 
         <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
         
-            <article class="w-full md:w-1/2 lg:w-1/3 px-4">
+            <article class="w-full md:w-1/2 lg:w-1/3 px-4 mb-12">
  {{-- @php(post_class()) --}}
                 <header class="case-studies__heading relative">
 

@@ -35,6 +35,7 @@ input[name='panel']:checked ~ .accordion__content {
     position: relative;
     color: white;
 
+   
     & a {
         padding-left: 0.75rem;
         padding-right: 0.75rem;
@@ -45,7 +46,12 @@ input[name='panel']:checked ~ .accordion__content {
 .dropdown-menu {
 
     & .nav-item a {
-        color: #c3c3c3;
+        color: #676767;
+
+        &:hover {
+            color: black;
+        }
+    
     }
 
     transform: translateX(-10px);
@@ -57,16 +63,14 @@ input[name='panel']:checked ~ .accordion__content {
     list-style: none;
     position: absolute;
     left: 0;
-    top: 100%;
+    top: 150%;
 
     box-shadow: rgba(0, 0, 0, 0.04) 0px 0px 4px 0px, rgba(0, 0, 0, 0.08) 0px 8px 16px 0px;
-    position: absolute;
-    left: 0px;
-    top: 100%;
+ 
     background: rgb(255, 255, 255);
     border-radius: 0.3rem;
-    padding: 0.25rem 0px;
-    min-width: 180px;
+    padding: 0.45rem 8px;
+    min-width: 205px;
     transition: 0.4s ease-in-out;
     opacity: 0;
 
@@ -143,7 +147,7 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-family: 'Montserrat', sans-serif;
-    word-break: break-all;
+    word-break: break-word;
 
     // &::-webkit-scrollbar {
     //     width: 9px;
