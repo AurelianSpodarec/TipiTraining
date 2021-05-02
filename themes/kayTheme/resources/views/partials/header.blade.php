@@ -1,4 +1,4 @@
-<header class="js-mainHeader transition duration-500 ease-in-out top-0 z-40 fixed w-full">
+<header class="js-mainHeader transition duration-500 ease-in-out top-0 z-40 fixed w-full" style="{!! is_single() ? "background-color: #191919;" : ""; !!}">
 <div class="px-5 mx-auto max-w-6xl">
 <div class="flex justify-between items-center flex-wrap my-4">
 

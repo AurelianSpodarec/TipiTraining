@@ -5,11 +5,31 @@
 // import Glide, { Controls, Breakpoints } from '@glidejs/glide';
 import Glide, { Controls, Breakpoints } from '@glidejs/glide/dist/glide.modular.esm'
 
+'use strict';
 
 // $(document).ready(() => {
 //   // console.log('Hello world');
 // });
 (function() {
+
+
+
+    var processScroll = function processScroll() {
+        var docElem = document.documentElement,
+            docBody = document.body,
+            scrollTop = docElem['scrollTop'] || docBody['scrollTop'],
+            scrollBottom = (docElem['scrollHeight'] || docBody['scrollHeight']) - window.innerHeight,
+            scrollPercent = scrollTop / scrollBottom * 100 + '%';
+
+        document.getElementById('progress-bar').style.setProperty('--scrollAmount', scrollPercent);
+
+        console.log('docElem');
+    };
+
+    window.addEventListener('scroll', processScroll);
+
+
+
 
 
     var headerNavigation = document.querySelectorAll('.menu-item-has-children');
@@ -112,25 +132,50 @@ new Glide('.glide').mount({ Controls, Breakpoints })
 
 
 
-let prog = document.getElementById('progress');
+// const addProgressBar = () => {
+//     const element = document.createElement('div');
+//     element.id = 'progress-container';
+//     element.innerHTML = '<div id="progress-bar"></div>';
 
-let body = document.querySelectorAll('.article'),
-    html = document.documentElement;
+//     document.body.appendChild(element);
+// };
+// const readingProgress = target => {
 
-let height = Math.max(body.scrollHeight, body.offsetHeight, body.clientHeight, body.scrollHeight, body.offsetHeight);
+//     const winTop = window.pageYOffset || document.documentElement.scrollTop;
+//     const targetBottom = target.offsetTop + target.scrollHeight;
+//     const windowBottom = winTop + window.outerHeight;
+//     const progress = 100 - (((targetBottom - windowBottom + window.outerHeight / 3) / (targetBottom - window.outerHeight + window.outerHeight / 3)) * 100);
 
-const setProgress = () => {
-   let scrollFromTop = (document.documentElement.scrollTop || body.scrollTop) + html.clientHeight;
-   let width = scrollFromTop / height * 100 + '%';
+//     document.querySelector('#progress-bar').style.width = progress + '%';
 
-   console.log('scroll', html.clientHeight, body.scrollTop);
+//     (progress > 100) ? document.querySelector('#progress-container').classList.add('ready') : document.querySelector('#progress-container').classList.remove('ready');
+// };
 
-   prog.style.width = width;
-}
+// document.addEventListener('DOMContentLoaded', () => {
+//     const content = document.querySelector('.article');
+//     addProgressBar();
+//     readingProgress(content);
+//     window.addEventListener('scroll', () => {
+//          readingProgress(content);
+//     });
+//  });
 
-window.addEventListener('scroll', setProgress);
 
-setProgress();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 })();
